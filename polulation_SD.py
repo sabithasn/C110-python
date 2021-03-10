@@ -7,9 +7,9 @@ import csv
 
 def random_set_of_means(counter):
     datafile = pd.read_csv("data.csv")
-    data =datafile["temp"].tolist()
+    data =datafile["average"].tolist()
     dataset = []
-    for i in rande (0, counter):
+    for i in range (0, counter):
         random_index = random.randint(0,len(data))
         value = data[random_index]
         dataset.append(value)
@@ -19,7 +19,7 @@ def random_set_of_means(counter):
 
 def show_fig(mean_list):
     datafile= mean_list
-    fig = ff.create_distplot([data], ["temp"], show_hist=False)
+    fig = ff.create_distplot([data], ["average"], show_hist=False)
     ffig.add_trace(go.Scatter(x=[mean, mean], y=[0, 1], mode="lines", name="MEAN"))
     fig.show()
 
