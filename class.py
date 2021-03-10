@@ -5,7 +5,7 @@ import pandas as pd
 import csv
 
 datafile = pd.read_csv("data.csv")
-data =datafile["temp"].tolist()
+data =datafile["average"].tolist()
 population_mean = statistics.mean(data)
-fig = ff.create_distplot([data], ["temp"], show_hist=False)
+fig = ff.create_distplot([data], ["average"], show_hist=False)
 fig.show()
