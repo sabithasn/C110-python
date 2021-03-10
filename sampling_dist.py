@@ -9,7 +9,7 @@ def random_set_of_means(counter):
     datafile = pd.read_csv("data.csv")
     data =datafile["average"].tolist()
     dataset = []
-    for i in rande (0, counter):
+    for i in range (0, counter):
         random_index = random.randint(0,len(data))
         value = data[random_index]
         dataset.append(value)
