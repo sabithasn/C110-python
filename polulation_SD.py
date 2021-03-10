@@ -1,5 +1,5 @@
 import plotly.figure_factory as ff
-import plotly.graph_object as go
+import plotly.graph_objects as go
 import statistics
 import random
 import pandas as pd 
@@ -20,7 +20,7 @@ def random_set_of_means(counter):
 def show_fig(mean_list):
     datafile= mean_list
     fig = ff.create_distplot([datafile], ["average"], show_hist=False)
-    ffig.add_trace(go.Scatter(x=[mean, mean], y=[0, 1], mode="lines", name="MEAN"))
+    fig.add_trace(go.Scatter(x=[mean, mean], y=[0, 1], mode="lines", name="MEAN"))
     fig.show()
 
 
