@@ -10,7 +10,7 @@ def random_set_of_means(counter):
     data =datafile["average"].tolist()
     dataset = []
     for i in range (0, counter):
-        random_index = random.randint(0,len(data))
+        random_index = random.randint(0,len(data)-1)
         value = data[random_index]
         dataset.append(value)
 
@@ -19,7 +19,7 @@ def random_set_of_means(counter):
 
 def show_fig(mean_list):
     datafile= mean_list
-    fig = ff.create_distplot([data], ["average"], show_hist=False)
+    fig = ff.create_distplot([datafile], ["average"], show_hist=False)
     ffig.add_trace(go.Scatter(x=[mean, mean], y=[0, 1], mode="lines", name="MEAN"))
     fig.show()
 
